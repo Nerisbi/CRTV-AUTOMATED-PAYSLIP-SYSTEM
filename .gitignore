@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+output/
+logs/
+
+input/payslip.pdf
+*.xlsx
+
+.env
