@@ -2,5 +2,3 @@ pandas
 openpyxl
 PyPDF2
 reportlab
-ttkbootstrap
-Pillow
