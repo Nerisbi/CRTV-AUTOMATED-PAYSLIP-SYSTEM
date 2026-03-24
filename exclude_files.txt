@@ -1,0 +1,31 @@
+venv\
+.git\
+.gitignore
+__pycache__\
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Exclude distribution folders
+CRTV_Payslip_System_*
+*.zip
+
+# Exclude temporary files
+temp*
+tmp*
+.DS_Store
+Thumbs.db

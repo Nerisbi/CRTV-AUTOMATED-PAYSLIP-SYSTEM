@@ -1,0 +1,66 @@
+CRTV PAYSLIP DISTRIBUTION SYSTEM - INSTALLATION GUIDE
+======================================================
+
+QUICK START (5 minutes):
+------------------------
+
+1. INSTALL PYTHON (if not already installed):
+   - Open "Python Installer" folder on USB
+   - Run python-3.11.8-amd64.exe
+   - IMPORTANT: Check "Add Python to PATH" during installation
+   - Restart computer after installation
+
+2. EXTRACT THE APPLICATION:
+   - Copy "CRTV_Payslip_System_20260324.zip" to your computer
+   - Right-click → "Extract All..."
+   - Choose destination folder (e.g., Documents)
+
+3. RUN SETUP:
+   - Open the extracted folder
+   - Double-click "setup.bat"
+   - Wait for installation to complete (shows green checkmarks)
+
+4. LAUNCH APPLICATION:
+   - Look for "CRTV Payslip System" on your desktop
+   - Double-click to launch
+   - Or double-click "start_app.bat" in the folder
+
+HOW TO USE:
+----------
+
+1. Place your files in the "input" folder:
+   - payslip.pdf (your payslip PDF file)
+   - employees.xlsx (employee list with Name, Matricule, Email)
+   - Stamp.png (company stamp image)
+
+2. Run the application:
+   - Select files using Browse buttons
+   - Click "Start Sending" to distribute payslips
+
+TROUBLESHOOTING:
+---------------
+
+Problem: "Python not found"
+Solution: Install Python from USB drive (Step 1)
+
+Problem: "Virtual environment error"
+Solution: Run setup.bat again
+
+Problem: "Email not sending"
+Solution: Check internet connection and email settings
+
+SUPPORT:
+--------
+For technical support, contact: [your-phone-number]
+Email: [your-email-address]
+Office hours: [your-support-hours]
+
+SYSTEM REQUIREMENTS:
+-------------------
+- Windows 10 or higher
+- 2GB RAM minimum
+- Internet connection for email sending
+- 100MB free disk space
+
+VERSION: 1.0
+UPDATED: March 2024
