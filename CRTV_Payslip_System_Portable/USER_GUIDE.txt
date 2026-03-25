@@ -1,0 +1,21 @@
+# CRTV Payslip System - User Guide 
+ 
+## Quick Start Guide 
+ 
+1. Run setup_for_users.bat to install dependencies 
+2. Place your files in the input folder: 
+   - payslips.pdf (combined payslip PDF) 
+   - employees.xlsx (employee list with Name and Email columns) 
+   - Stamp.png (company stamp image) 
+3. Launch the app using the desktop shortcut 
+4. Use the interface to process and send payslips 
+ 
+## Features 
+- Professional animated loading screen 
+- Modern user interface for directors 
+- Automatic email sending via Gmail 
+- Simulation mode for testing 
+- Progress tracking and error handling 
+ 
+## Support 
+For technical support, contact CRTV IT Department. 
