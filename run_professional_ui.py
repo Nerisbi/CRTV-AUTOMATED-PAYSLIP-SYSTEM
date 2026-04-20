@@ -11,14 +11,17 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 try:
-    from ui.fixed_compact_ui import main
+    from ui.fixed_compact_ui import FixedCompactUI
     print("Starting CRTV Professional Payslip System...")
-    main()
+    
+    app = FixedCompactUI()
+    app.run()
+    
 except ImportError as e:
     print(f"Import Error: {e}")
     print("Please ensure all required packages are installed:")
     print("pip install pandas openpyxl PyPDF2 reportlab pillow")
-    input("Press Enter to exit...")
 except Exception as e:
     print(f"Error starting application: {e}")
-    input("Press Enter to exit...")
+    import traceback
+    traceback.print_exc()
