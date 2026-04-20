@@ -10,26 +10,31 @@ from pathlib import Path
 
 def check_dependencies():
     """Check if required dependencies are installed"""
-    required_packages = [
-        'fastapi', 'uvicorn', 'PyPDF2', 'pandas', 'reportlab',
-        'Pillow', 'python-multipart'
-    ]
+    required_packages = {
+        'fastapi': 'fastapi',
+        'uvicorn': 'uvicorn', 
+        'PyPDF2': 'PyPDF2',
+        'pandas': 'pandas',
+        'reportlab': 'reportlab',
+        'Pillow': 'PIL',  # Pillow imports as PIL
+        'python-multipart': 'multipart'
+    }
     
     missing_packages = []
-    for package in required_packages:
+    for package_name, import_name in required_packages.items():
         try:
-            __import__(package.replace('-', '_'))
+            __import__(import_name)
         except ImportError:
-            missing_packages.append(package)
+            missing_packages.append(package_name)
     
     if missing_packages:
-        print("❌ Missing required packages:")
+        print("Missing required packages:")
         for package in missing_packages:
             print(f"   - {package}")
-        print("\n📦 Install with: pip install fastapi uvicorn PyPDF2 pandas reportlab Pillow python-multipart")
+        print("\nInstall with: pip install fastapi uvicorn PyPDF2 pandas reportlab Pillow python-multipart")
         return False
     
-    print("✅ All dependencies are installed")
+    print("All dependencies are installed")
     return True
 
 def create_directories():
@@ -37,16 +42,16 @@ def create_directories():
     directories = ['uploads', 'outputs', 'input']
     for directory in directories:
         Path(directory).mkdir(exist_ok=True)
-    print("📁 Created necessary directories")
+    print("Created necessary directories")
 
 def start_web_app():
     """Start the web application"""
-    print("\n🚀 Starting CRTV Payslip Distribution System Web Application")
+    print("\nStarting CRTV Payslip Distribution System Web Application")
     print("=" * 60)
-    print("📱 Web Interface: http://localhost:8000")
-    print("📚 API Documentation: http://localhost:8000/docs")
+    print("Web Interface: http://localhost:8000")
+    print("API Documentation: http://localhost:8000/docs")
     print("=" * 60)
-    print("\n⚠️  Press Ctrl+C to stop the server\n")
+    print("\nPress Ctrl+C to stop the server\n")
     
     # Change to the backend directory
     backend_dir = Path(__file__).parent / "backend"
@@ -56,16 +61,16 @@ def start_web_app():
     try:
         subprocess.run([sys.executable, "main.py"], check=True)
     except KeyboardInterrupt:
-        print("\n👋 Web application stopped")
+        print("\nWeb application stopped")
     except subprocess.CalledProcessError as e:
-        print(f"\n❌ Error starting web application: {e}")
+        print(f"\nError starting web application: {e}")
         return False
     
     return True
 
 def main():
     """Main launcher function"""
-    print("🔧 CRTV Payslip Distribution System - Web App Launcher")
+    print("CRTV Payslip Distribution System - Web App Launcher")
     print("=" * 55)
     
     # Check dependencies
